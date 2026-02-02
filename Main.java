@@ -1,51 +1,64 @@
+//Name: Anas Ali
+//Assignment: Pgm1Base
+//Lecture Class: CS201R
+//Lab Class: CS201L
+
 import java.util.Scanner;
 
 public class Main {
 
-    public static void main(String[] args) {
-    
-    //create variables
+  public static void main(String[] args) {
+
+    // create variables
 
     Scanner scanner = new Scanner(System.in);
     int inValue;
 
-    //practice input
+    // practice input
     System.out.println("Please enter your next value: ");
     inValue = scanner.nextInt();
     System.out.println("Why did you enter " + inValue + "?");
 
-    //setting up other variable types
+    // setting up other variable types
     char letter = 'A';
     String words = "The Words";
 
-    //LECTURE 1
-    //add code to input a string replacing the variable 
-    //words with the input value
+    // LECTURE 1
+    // add code to input a string replacing the variable
+    // words with the input value
+    scanner.nextLine();
+    System.out.println("Enter a string: ");
+    words = scanner.nextLine();
 
-    //print the string
+    // print the string
+    System.out.println("You entered: " + words);
 
-
-
-
-    //add code to input a new value for the variable
-    //letter
-
-    //LECTURE 2
-    //if the letter entered is A or B - print "You did GREAT!"
-    //if the letter is C - print "You did GOOD!"
-    //if the letter is D or F - print "Try again"
-    //if the letter is something else, print "Incorrect value"
-
-
-    //LECTURE 1
-    //this is demonstrating different values
+    // add code to input a new value for the variable
+    // letter
+    System.out.println("Enter a letter: ");
+    letter = scanner.next().charAt(0);
+    // LECTURE 2
+    // if the letter entered is A or B - print "You did GREAT!"
+    // if the letter is C - print "You did GOOD!"
+    // if the letter is D or F - print "Try again"
+    // if the letter is something else, print "Incorrect value"
+    if (letter == 'A' || letter == 'B') {
+      System.out.println("You did GREAT!");
+    } else if (letter == 'C') {
+      System.out.println("You did GOOD!");
+    } else if (letter == 'D' || letter == 'F') {
+      System.out.println("Try again");
+    } else {
+      System.out.println("Incorrect value");
+    }
+    // LECTURE 1
+    // this is demonstrating different values
     String bigTheta = "\u0398";
 
     System.out.println(bigTheta + "    \u03B1" + "   " + 0b1111);
-    
 
-    //LECTURE 1
-    //formatting values for output
+    // LECTURE 1
+    // formatting values for output
     double value = 16.404674;
     System.out.printf("Value is $%4.2f", value);
 
